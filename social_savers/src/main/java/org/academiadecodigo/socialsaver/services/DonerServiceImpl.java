@@ -12,11 +12,22 @@ public class DonerServiceImpl {
     //private CustomerDao customerDao;
 
     private List<Doner> doners= new LinkedList<>();
+    private Doner loggedDoner;
 
 
    // public void setCustomerDao(CustomerDao customerDao) {
        // this.customerDao = customerDao;
    // }
+
+    public boolean verifyLogin(String username, String password){
+        for (Doner doner:doners) {
+            if(doner.getName().equals(username) && doner.getPassword().equals(password)){
+                loggedDoner=doner;
+              return true;
+            }
+        }
+    return false;
+    }
 
 
     public void add(Doner doner){
