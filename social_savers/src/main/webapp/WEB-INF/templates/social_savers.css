@@ -1,0 +1,10 @@
+#Body_Container {
+    width: 90%;
+    background-color: aquamarine;
+    margin: auto
+}
+#needs_list {
+    background-color: beige;
+    width:80%;
+    margin: auto;
+}
