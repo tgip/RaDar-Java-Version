@@ -6,14 +6,13 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "Doners")
+
 public class Items implements Model {
 
-    private int id;
+
     private String type;
     private int receiverId;
-    private boolean donated;
+    private boolean donated=false;
 
     public boolean isDonated() {
         return donated;
@@ -23,8 +22,6 @@ public class Items implements Model {
         this.donated = donated;
     }
 
-    @ManyToOne
-    private AbstractEntity entity;
 
 
     public String getType() {

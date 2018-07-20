@@ -7,8 +7,7 @@ import org.academiadecodigo.socialsaver.persistence.model.Entity.Doner;
  */
 public class AuthServiceImpl implements AuthService {
 
-    private Integer accessingEntityId;
-    private DonerService donerService;
+    private Doner do
 
     /**
      * Sets the customer service

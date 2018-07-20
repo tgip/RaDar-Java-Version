@@ -1,7 +1,6 @@
 package org.academiadecodigo.socialsaver.controller;
 
 import org.academiadecodigo.socialsaver.persistence.model.Entity.Doner;
-import org.academiadecodigo.socialsaver.services.DonerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
