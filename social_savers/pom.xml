@@ -1,7 +1,7 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.academiadecodigo.socialsaver</groupId>
-    <artifactId>socialsaver.tx</artifactId>
+    <artifactId>socialsaver</artifactId>
     <packaging>war</packaging>
     <version>0.0.1</version>
 
