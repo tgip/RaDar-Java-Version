@@ -3,18 +3,18 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="authService" class="org.academiadecodigo.javabank.services.AuthServiceImpl">
-        <property name="customerService" ref="customerService"/>
+    <bean id="authService" class="org.academiadecodigo.socialsaver.services.AuthServiceImpl">
+        <property name="donerService" ref="donerService"/>
     </bean>
 
-    <bean id="customerService" class="org.academiadecodigo.javabank.services.CustomerServiceImpl">
+    <bean id="donerService" class="org.academiadecodigo.socialsaver.services.DonerServiceImpl">
         <property name="customerDao" ref="customerDao"/>
     </bean>
 
-    <bean id="accountService" class="org.academiadecodigo.javabank.services.AccountServiceImpl">
+    <bean id="accountService" class="org.academiadecodigo.socialsaver.services.DonationServiceImpl">
         <property name="accountDao" ref="accountDao"/>
     </bean>
 
-    <bean id="accountFactory" class="org.academiadecodigo.javabank.factories.AccountFactory"/>
+    <bean id="accountFactory" class="org.academiadecodigo.socialsaver.factories.DonerFactory"/>
 
 </beans>

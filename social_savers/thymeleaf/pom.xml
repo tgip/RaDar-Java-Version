@@ -1,7 +1,7 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.academiadecodigo.javabank</groupId>
-    <artifactId>javabank-step8-spring.tx</artifactId>
+    <groupId>org.academiadecodigo.socialsaver</groupId>
+    <artifactId>socialsaver.tx</artifactId>
     <packaging>war</packaging>
     <version>0.0.1</version>
 
@@ -113,7 +113,7 @@
                 <configuration>
                     <url>http://localhost:8080/manager/text</url>
                     <server>tomcat</server>
-                    <path>/javabank-popstars</path>
+                    <path>/sss</path>
                 </configuration>
             </plugin>
 
@@ -133,11 +133,10 @@
                     <transformers>
                         <transformer
                                 implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                            <mainClass>org.academiadecodigo.javabank.App</mainClass>
+                            <mainClass>org.academiadecodigo.socialsaver.App</mainClass>
                         </transformer>
 
-                        <!-- Make sure multiple spring jars do not override exiting META-INF -->
-                        <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+d                        <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                             <resource>META-INF/spring.handlers</resource>
                         </transformer>
                         <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
