@@ -1,6 +1,6 @@
 package org.academiadecodigo.socialsaver.persistence.jpa.dao;
 
-import org.academiadecodigo.socialsaver.persistence.model.Ipss;
+import org.academiadecodigo.socialsaver.persistence.model.Entity.Receiver;
 import org.academiadecodigo.socialsaver.persistence.dao.jpa.JpaRecipientDao;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,7 +17,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
-public class JpaIpssDaoTest {
+public class JpaReceiverDaoTest {
 
     private JpaRecipientDao recipientDao;
     private EntityManager em;
@@ -35,23 +35,23 @@ public class JpaIpssDaoTest {
     public void testFindAll() {
 
         // setup
-        List<Ipss> mockIpsses = new ArrayList<>();
+        List<Receiver> mockReceivers = new ArrayList<>();
         CriteriaQuery criteriaQuery = mock(CriteriaQuery.class);
         CriteriaBuilder criteriaBuilder = mock(CriteriaBuilder.class);
         TypedQuery typedQuery = mock(TypedQuery.class);
         when(em.getCriteriaBuilder()).thenReturn(criteriaBuilder);
-        when(criteriaBuilder.createQuery(Ipss.class)).thenReturn(criteriaQuery);
+        when(criteriaBuilder.createQuery(Receiver.class)).thenReturn(criteriaQuery);
         when(em.createQuery(criteriaQuery)).thenReturn(typedQuery);
         when(em.createQuery(any(CriteriaQuery.class))).thenReturn(typedQuery);
         when(em.createQuery(anyString(), any(Class.class))).thenReturn(typedQuery);
-        when(typedQuery.getResultList()).thenReturn(mockIpsses);
+        when(typedQuery.getResultList()).thenReturn(mockReceivers);
 
         // exercise
-        List<Ipss> ipsses = recipientDao.findAll();
+        List<Receiver> receivers = recipientDao.findAll();
 
         // verify
         verify(typedQuery, times(1)).getResultList();
-        assertEquals(mockIpsses, ipsses);
+        assertEquals(mockReceivers, receivers);
     }
 
     @Test
@@ -59,16 +59,16 @@ public class JpaIpssDaoTest {
 
         // setup
         int fakeId = 9999;
-        Ipss fakeIpss = new Ipss();
-        fakeIpss.setId(fakeId);
-        when(em.find(Ipss.class, fakeId)).thenReturn(fakeIpss);
+        Receiver fakeReceiver = new Receiver();
+        fakeReceiver.setId(fakeId);
+        when(em.find(Receiver.class, fakeId)).thenReturn(fakeReceiver);
 
         // exercise
-        Ipss ipss = recipientDao.findById(fakeId);
+        Receiver receiver = recipientDao.findById(fakeId);
 
         // verify
-        verify(em, times(1)).find(Ipss.class, fakeId);
-        assertEquals(fakeIpss, ipss);
+        verify(em, times(1)).find(Receiver.class, fakeId);
+        assertEquals(fakeReceiver, receiver);
 
     }
 
@@ -76,15 +76,15 @@ public class JpaIpssDaoTest {
     public void testSaveOrUpdate() {
 
         // setup
-        Ipss fakeIpss = new Ipss();
-        when(em.merge(any(Ipss.class))).thenReturn(fakeIpss);
+        Receiver fakeReceiver = new Receiver();
+        when(em.merge(any(Receiver.class))).thenReturn(fakeReceiver);
 
         // exercise
-        Ipss ipss = recipientDao.saveOrUpdate(fakeIpss);
+        Receiver receiver = recipientDao.saveOrUpdate(fakeReceiver);
 
         // verify
-        verify(em, times(1)).merge(any(Ipss.class));
-        assertEquals(fakeIpss, ipss);
+        verify(em, times(1)).merge(any(Receiver.class));
+        assertEquals(fakeReceiver, receiver);
 
     }
 
@@ -93,15 +93,15 @@ public class JpaIpssDaoTest {
 
         // setup
         int fakeId = 9999;
-        Ipss fakeIpss = new Ipss();
-        fakeIpss.setId(fakeId);
-        when(em.find(Ipss.class, fakeId)).thenReturn(fakeIpss);
+        Receiver fakeReceiver = new Receiver();
+        fakeReceiver.setId(fakeId);
+        when(em.find(Receiver.class, fakeId)).thenReturn(fakeReceiver);
 
         // exercise
         recipientDao.delete(fakeId);
 
         // verify
-        verify(em, times(1)).remove(fakeIpss);
+        verify(em, times(1)).remove(fakeReceiver);
 
     }
 }

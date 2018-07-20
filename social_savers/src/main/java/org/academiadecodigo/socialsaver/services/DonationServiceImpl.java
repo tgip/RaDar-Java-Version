@@ -1,7 +1,6 @@
 package org.academiadecodigo.socialsaver.services;
 
 import org.academiadecodigo.socialsaver.persistence.model.account.Account;
-import org.academiadecodigo.socialsaver.persistence.dao.AccountDao;
 import org.springframework.transaction.annotation.Transactional;
 
 /**

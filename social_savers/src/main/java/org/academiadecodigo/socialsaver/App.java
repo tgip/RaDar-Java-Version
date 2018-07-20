@@ -1,7 +1,6 @@
 package org.academiadecodigo.socialsaver;
 
-import org.academiadecodigo.socialsaver.controller.Controller;
-import org.academiadecodigo.socialsaver.controller.LoginController;
+
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 public class App {

@@ -1,7 +1,7 @@
 package org.academiadecodigo.socialsaver.services;
 
-import org.academiadecodigo.socialsaver.persistence.model.Doner;
-import org.academiadecodigo.socialsaver.persistence.model.Ipss;
+import org.academiadecodigo.socialsaver.persistence.model.Entity.Doner;
+import org.academiadecodigo.socialsaver.persistence.model.Entity.Receiver;
 
 import java.util.List;
 import java.util.Set;
@@ -41,5 +41,5 @@ public interface IpssService {
      * @param id the customer id
      * @return the list of recipients of the customer
      */
-    List<Ipss> listRecipients(Integer id);
+    List<Receiver> listRecipients(Integer id);
 }

@@ -1,97 +1,46 @@
 package org.academiadecodigo.socialsaver.services;
 
-import org.academiadecodigo.socialsaver.persistence.model.Doner;
-import org.academiadecodigo.socialsaver.persistence.model.Ipss;
-import org.academiadecodigo.socialsaver.persistence.model.account.Account;
+import org.academiadecodigo.socialsaver.persistence.model.Entity.Doner;
+import org.academiadecodigo.socialsaver.persistence.model.Entity.Receiver;
 import org.academiadecodigo.socialsaver.persistence.dao.CustomerDao;
+import org.academiadecodigo.socialsaver.persistence.model.Items;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * An {@link DonerService} implementation
  */
 public class DonerServiceImpl implements DonerService {
 
-    private CustomerDao customerDao;
+    //private CustomerDao customerDao;
 
-    /**
-     * Sets the customer data access object
-     *
-     * @param customerDao the account DAO to set
-     */
-    public void setCustomerDao(CustomerDao customerDao) {
-        this.customerDao = customerDao;
+    private List<Doner> doners= new LinkedList<>();
+    private ItemService itemService;
+
+   // public void setCustomerDao(CustomerDao customerDao) {
+       // this.customerDao = customerDao;
+   // }
+
+
+    public void add(Doner doner){
+        doners.add(doner);
     }
 
-    /**
-     * @see DonerService#get(Integer)
-     */
-    @Override
-    public Doner get(Integer id) {
-        return customerDao.findById(id);
+    public void remove(Doner doner){
+        doners.remove(doner);
     }
 
-    /**
-     * @see DonerService#getBalance(Integer)
-     */
-    @Override
-    public double getBalance(Integer id) {
-
-        Doner customer = customerDao.findById(id);
-
-        if (customer == null) {
-            throw new IllegalArgumentException("Doner does not exists");
-        }
-
-        List<Account> accounts = customer.getAccounts();
-
-        double balance = 0;
-        for (Account account : accounts) {
-            balance += account.getBalance();
-        }
-
-        return balance;
+    public Doner getId(int id){
+        return doners.get(id);
     }
 
-    /**
-     * @see DonerService#listCustomerAccountIds(Integer)
-     */
-    @Override
-    public Set<Integer> listCustomerAccountIds(Integer id) {
+   // public Doner get(Integer id) {
+      //  return customerDao.findById(id);
+    //}
 
-        Doner customer = customerDao.findById(id);
 
-        if (customer == null) {
-            throw new IllegalArgumentException("Doner does not exist");
-        }
-
-        Set<Integer> accountIds = new HashSet<>();
-        List<Account> accounts = customer.getAccounts();
-
-        for (Account account : accounts) {
-            accountIds.add(account.getId());
-        }
-
-        return accountIds;
-    }
-
-    /**
-     * @see DonerService#listRecipients(Integer)
-     */
-    @Transactional(readOnly = true)
-    @Override
-    public List<Ipss> listRecipients(Integer id) {
-
-        Doner customer = customerDao.findById(id);
-
-        if (customer == null) {
-            throw new IllegalArgumentException("Doner does not exists");
-        }
-
-        return new ArrayList<>(customerDao.findById(id).getIpsses());
+    public void donate(Receiver receiver, Items item){
+        itemService.donated(item);
     }
 }

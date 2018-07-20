@@ -1,6 +1,6 @@
 package org.academiadecodigo.socialsaver.persistence.jpa.dao;
 
-import org.academiadecodigo.socialsaver.persistence.model.Doner;
+import org.academiadecodigo.socialsaver.persistence.model.Entity.Doner;
 import org.academiadecodigo.socialsaver.persistence.dao.jpa.JpaCustomerDao;
 import org.junit.Before;
 import org.junit.Test;

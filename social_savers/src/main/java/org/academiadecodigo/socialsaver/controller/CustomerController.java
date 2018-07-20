@@ -1,6 +1,6 @@
 package org.academiadecodigo.socialsaver.controller;
 
-import org.academiadecodigo.socialsaver.persistence.model.Doner;
+import org.academiadecodigo.socialsaver.persistence.model.Entity.Doner;
 import org.academiadecodigo.socialsaver.services.DonerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -35,8 +35,7 @@ public class CustomerController {
 
     @RequestMapping(method = RequestMethod.POST, value = "")
     public String createCustomer(@ModelAttribute("customer") Doner customer) {
-        System.out.println(customer.getFirstName());
-        System.out.println(customer.getLastName());
+
 
         return "redirect:/customer/1";
     }

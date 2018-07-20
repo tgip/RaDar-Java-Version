@@ -1,13 +1,13 @@
 package org.academiadecodigo.socialsaver.services;
 
-import org.academiadecodigo.socialsaver.persistence.model.Doner;
+import org.academiadecodigo.socialsaver.persistence.model.Entity.Doner;
 
 /**
  * An {@link AuthService} implementation
  */
 public class AuthServiceImpl implements AuthService {
 
-    private Integer accessingCustomerId;
+    private Integer accessingEntityId;
     private DonerService donerService;
 
     /**
@@ -25,13 +25,13 @@ public class AuthServiceImpl implements AuthService {
     @Override
     public boolean authenticate(Integer id) {
 
-        Doner customer = donerService.get(id);
+        Doner doner = donerService.get(id);
 
-        if (customer == null) {
+        if (doner == null) {
             return false;
         }
 
-        accessingCustomerId = customer.getId();
+        accessingEntityId = doner.getId();
         return true;
     }
 
@@ -40,6 +40,6 @@ public class AuthServiceImpl implements AuthService {
      */
     @Override
     public Doner getAccessingCustomer() {
-        return donerService.get(accessingCustomerId);
+        return donerService.get(accessingEntityId);
     }
 }
