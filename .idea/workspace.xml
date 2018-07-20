@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbf95659-b75d-4c2d-8b90-ec9a6637de00" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social_savers/src/main/webapp/WEB-INF/templates/social_savers.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/social_savers/src/main/webapp/WEB-INF/templates/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/social_savers/src/main/webapp/WEB-INF/templates/Main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social_savers/src/main/webapp/WEB-INF/templates/social_savers.css" beforeDir="false" afterPath="$PROJECT_DIR$/social_savers/src/main/webapp/WEB-INF/templates/social_savers.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/social_savers/thymeleaf/target/" />
     <ignored path="$PROJECT_DIR$/social_savers/target/" />
@@ -23,14 +15,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7588076">
+    <splitter split-orientation="horizontal" split-proportion="0.53706294">
       <split-first>
         <leaf>
           <file leaf-file-name="Main.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/social_savers/src/main/webapp/WEB-INF/templates/Main.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="43">
-                  <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+                <state relative-caret-position="428">
+                  <caret line="79" column="14" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
+                  <folding>
+                    <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -42,8 +37,8 @@
           <file leaf-file-name="social_savers.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/social_savers/src/main/webapp/WEB-INF/templates/social_savers.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+                <state relative-caret-position="443">
+                  <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -58,8 +53,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/social_savers/src/main/webapp/WEB-INF/templates/social_savers.css" />
+        <option value="$PROJECT_DIR$/social_savers/.gitignore" />
         <option value="$PROJECT_DIR$/social_savers/src/main/webapp/WEB-INF/templates/Main.html" />
+        <option value="$PROJECT_DIR$/social_savers/src/main/webapp/WEB-INF/templates/social_savers.css" />
       </list>
     </option>
   </component>
@@ -87,10 +83,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="170" />
-    <option name="y" value="30" />
-    <option name="width" value="1531" />
-    <option name="height" value="974" />
+    <option name="x" value="-85" />
+    <option name="y" value="313" />
+    <option name="width" value="1854" />
+    <option name="height" value="969" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -331,15 +327,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532113131249</updated>
-      <workItem from="1532113133789" duration="2516000" />
+      <workItem from="1532113133789" duration="6107000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2516000" />
+    <option name="totallyTimeSpent" value="6107000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="170" y="30" width="1531" height="974" extended-state="0" />
+    <frame x="-85" y="313" width="1854" height="969" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -353,10 +350,10 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Spring" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.3295325" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.33142203" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25654802" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21081677" />
       <window_info id="Web" side_tool="true" />
       <window_info anchor="right" id="Database" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -380,17 +377,27 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/social_savers/src/main/webapp/WEB-INF/templates/social_savers.css">
+    <entry file="file://$PROJECT_DIR$/social_savers/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        <state relative-caret-position="530">
+          <caret line="145" column="66" selection-start-line="145" selection-start-column="66" selection-end-line="145" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/social_savers/src/main/webapp/WEB-INF/templates/Main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+        <state relative-caret-position="428">
+          <caret line="79" column="14" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social_savers/src/main/webapp/WEB-INF/templates/social_savers.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
         </state>
       </provider>
     </entry>

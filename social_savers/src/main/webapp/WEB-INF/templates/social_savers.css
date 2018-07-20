@@ -1,10 +1,38 @@
 #Body_Container {
-    width: 90%;
-    background-color: aquamarine;
-    margin: auto
+    width: 100vw;
+    height: 90vh;
+    background-color: rgba(19, 184, 215, 0.6);
+    margin: .5em;
+    background: url("https://i.pinimg.com/originals/b1/3c/48/b13c48ba1a7323e98f3425457c94f954.jpg");
+    background-size: cover;
+    background-position: center;
 }
-#needs_list {
-    background-color: beige;
-    width:80%;
+
+.Main_Menu {
+    background-color: rgba(19, 184, 215, 0.6);
+    padding: .5em;
+    font-size: 1.8em;
+}
+
+.needs_list {
+    background-color: rgba(250,250,250,.9);
+    width: 85%;
+    padding: 1%;
     margin: auto;
+
+}
+
+div.card {
+
+    display: inline-flex;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }

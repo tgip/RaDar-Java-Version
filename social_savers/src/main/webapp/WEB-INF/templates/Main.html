@@ -19,36 +19,64 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
             integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
             crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+          integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./social_savers.css">
 </head>
 <body>
 <div id="Body_Container">
-    <div id="Main_Menu">Main Menu goes here</div>
-    <div id="needs_list">Mock List of needs
-        <table class="table-striped table-hover">
-            <tr class ="header">
-                <th>Tipo de Bens</th>
-                <th>Descrição</th>
-                <th></th>
-            </tr>
-            <tr>
-                <td>Comida</td>
-                <td>Batatas</td>
-                <td>
-                    <button class=".btn-success">Doar agora!</button>
-                </td>
-            </tr>
-            <tr>
-                <td>Roupa</td>
-                <td>Calças</td>
-                <td>
-                    <button class=".btn-primary">Doar agora!</button>
-                </td>
-            </tr>
-        </table>
+    <div class="Main_Menu"><span style="font-size: 2em"> <i class="fas fa-hand-holding-heart"></i></span> Main Menu goes
+        here
+    </div>
+    <div class="needs_list">The ipss's need :
+        <div>
+
+            <div class="card">
+                <div class="type">${type}</div>
+                <div class="description">${description}</div>
+                <div class="donate">
+                    <button id="${id}" class=".btn-success">Doar agora!</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="type">${type}</div>
+                <div class="description">${description}</div>
+                <div class="donate">
+                    <button id="${id}" class=".btn-success">Doar agora!</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="type">${type}</div>
+                <div class="description">${description}</div>
+                <div class="donate">
+                    <button id="${id}" class=".btn-success">Doar agora!</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="type">${type}</div>
+                <div class="description">${description}</div>
+                <div class="donate">
+                    <button id="${id}" class=".btn-success">Doar agora!</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="type">${type}</div>
+                <div class="description">${description}</div>
+                <div class="donate">
+                    <button id="${id}" class=".btn-success">Doar agora!</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="type">${type}</div>
+                <div class="description">${description}</div>
+                <div class="donate">
+                    <button id="${id}" class=".btn-success">Doar agora!</button>
+                </div>
+            </div>
+        </div>
 
     </div>
-    <div id="footer">&copy 2018 - Social_Savers_Inc.</div>
-</div>
+    <div class="footer">&copy 2018 - Social_Savers_Inc.</div>
 </body>
 </html>
