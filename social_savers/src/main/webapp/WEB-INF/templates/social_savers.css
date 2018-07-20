@@ -3,7 +3,7 @@
     height: 90vh;
     background-color: rgba(19, 184, 215, 0.6);
     margin: .5em;
-    background: url("https://i.pinimg.com/originals/b1/3c/48/b13c48ba1a7323e98f3425457c94f954.jpg");
+    background: url("https://cdn.tinybuddha.com/wp-content/uploads/2015/04/Happy-Hands.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -35,4 +35,14 @@ div.card {
     position: fixed;
     bottom: 0;
     right: 0;
+}
+
+input{
+    border: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+input[type="submit"]{
+    background: grey;
+    color: white;
 }
