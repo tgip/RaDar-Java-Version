@@ -1,44 +1,25 @@
 package org.academiadecodigo.socialsaver.services;
 
 import org.academiadecodigo.socialsaver.persistence.dao.CustomerDao;
-import org.academiadecodigo.socialsaver.persistence.model.Doner;
-import org.academiadecodigo.socialsaver.persistence.model.Ipss;
-import org.academiadecodigo.socialsaver.persistence.model.account.Account;
+import org.academiadecodigo.socialsaver.persistence.model.Entity.Doner;
+import org.academiadecodigo.socialsaver.persistence.model.Entity.Receiver;
+
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * An {@link DonerService} implementation
  */
-public class IpssServiceImpl implements DonerService {
+public class ReceiverService implements DonerService {
 
-    private CustomerDao customerDao;
+    private List<Receiver> receivers= new LinkedList<>();
 
-    /**
-     * Sets the customer data access object
-     *
-     * @param customerDao the account DAO to set
-     */
-    public void setCustomerDao(CustomerDao customerDao) {
-        this.customerDao = customerDao;
-    }
-
-    /**
-     * @see DonerService#get(Integer)
-     */
-    @Override
     public Doner get(Integer id) {
         return customerDao.findById(id);
     }
 
-    /**
-     * @see DonerService#getBalance(Integer)
-     */
-    @Override
+
     public double getBalance(Integer id) {
 
         Doner customer = customerDao.findById(id);
@@ -60,7 +41,6 @@ public class IpssServiceImpl implements DonerService {
     /**
      * @see DonerService#listCustomerAccountIds(Integer)
      */
-    @Override
     public Set<Integer> listCustomerAccountIds(Integer id) {
 
         Doner customer = customerDao.findById(id);
@@ -83,8 +63,7 @@ public class IpssServiceImpl implements DonerService {
      * @see DonerService#listRecipients(Integer)
      */
     @Transactional(readOnly = true)
-    @Override
-    public List<Ipss> listRecipients(Integer id) {
+    public List<Receiver> listRecipients(Integer id) {
 
         Doner customer = customerDao.findById(id);
 
@@ -92,6 +71,6 @@ public class IpssServiceImpl implements DonerService {
             throw new IllegalArgumentException("Doner does not exists");
         }
 
-        return new ArrayList<>(customerDao.findById(id).getIpsses());
+        return new ArrayList<>(customerDao.findById(id).getReceivers());
     }
 }

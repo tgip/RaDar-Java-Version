@@ -1,6 +1,6 @@
 package org.academiadecodigo.socialsaver.services;
 
-import org.academiadecodigo.socialsaver.persistence.model.Doner;
+import org.academiadecodigo.socialsaver.persistence.model.Entity.Doner;
 import org.academiadecodigo.socialsaver.persistence.model.account.Account;
 import org.academiadecodigo.socialsaver.persistence.model.account.CheckingAccount;
 import org.academiadecodigo.socialsaver.persistence.dao.CustomerDao;

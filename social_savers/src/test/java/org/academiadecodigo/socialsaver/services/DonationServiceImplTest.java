@@ -3,7 +3,6 @@ package org.academiadecodigo.socialsaver.services;
 import org.academiadecodigo.socialsaver.persistence.model.account.Account;
 import org.academiadecodigo.socialsaver.persistence.model.account.CheckingAccount;
 import org.academiadecodigo.socialsaver.persistence.model.account.SavingsAccount;
-import org.academiadecodigo.socialsaver.persistence.dao.AccountDao;
 import org.junit.Before;
 import org.junit.Test;
 

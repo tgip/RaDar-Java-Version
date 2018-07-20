@@ -3,7 +3,6 @@ package org.academiadecodigo.socialsaver.persistence.jpa.dao;
 import org.academiadecodigo.socialsaver.persistence.model.account.Account;
 import org.academiadecodigo.socialsaver.persistence.model.account.CheckingAccount;
 import org.academiadecodigo.socialsaver.persistence.model.account.SavingsAccount;
-import org.academiadecodigo.socialsaver.persistence.dao.jpa.JpaAccountDao;
 import org.junit.Before;
 import org.junit.Test;
 
