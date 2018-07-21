@@ -17,8 +17,34 @@
     <!-- Base package to search for spring beans -->
     <context:component-scan base-package="org.academiadecodigo.socialsaver"/>
 
-    <import resource="persistence.xml"/>
+    <!-- <import resource="persistence.xml"/> -->
     <import resource="services.xml"/>
     <import resource="presentation.xml"/>
+    <!-- Thymeleaf View Resolver, implements Spring ViewResolver interface -->
+    <bean id="viewResolver" class="org.thymeleaf.spring4.view.ThymeleafViewResolver">
+        <property name="templateEngine" ref="templateEngine"/>
+        <property name="characterEncoding" value="UTF-8"/>
+        <property name="contentType" value="text/html; charset=UTF-8"/>
+    </bean>
+
+    <!-- The ThymeleafViewResolver bean requires two additional beans from the Thymeleaf project to work:-->
+
+    <!-- Thymeleaf Template Engine (Spring4-specific version) -->
+    <bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">
+        <property name="templateResolvers">
+            <set>
+                <ref bean="templateResolver"/>
+            </set>
+        </property>
+    </bean>
+
+    <!-- Thymeleaf template resolver -->
+    <bean id="templateResolver" class="org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver">
+        <property name="prefix" value="/WEB-INF/templates/"/>
+        <property name="suffix" value=".html"/>
+        <property name="templateMode" value="HTML"/>
+        <property name="cacheable" value="false"/>
+        <property name="characterEncoding" value="UTF-8"/>
+    </bean>
 
 </beans>

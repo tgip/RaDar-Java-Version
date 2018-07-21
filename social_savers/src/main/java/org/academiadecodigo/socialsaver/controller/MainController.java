@@ -9,6 +9,9 @@ public class MainController {
 
     @RequestMapping(method = RequestMethod.GET, value = "/")
     public String root() {
-        return "redirect:/customer/1";
+        return "redirect:/login";
     }
+    /*public String root() {
+        return "redirect:/customer/1";
+    }*/
 }

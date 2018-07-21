@@ -7,7 +7,7 @@ org/academiadecodigo/socialsaver/controller/MainController.class
 org/academiadecodigo/socialsaver/persistence/model/Model.class
 org/academiadecodigo/socialsaver/controller/LoginController.class
 org/academiadecodigo/socialsaver/App.class
-org/academiadecodigo/socialsaver/services/DonerServiceImpl.class
+org/academiadecodigo/socialsaver/services/DonerService.class
 org/academiadecodigo/socialsaver/services/ReceiverService.class
 org/academiadecodigo/socialsaver/persistence/model/Items.class
 org/academiadecodigo/socialsaver/factories/DonerFactory.class
