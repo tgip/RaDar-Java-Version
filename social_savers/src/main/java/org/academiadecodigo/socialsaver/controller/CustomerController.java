@@ -1,7 +1,7 @@
 package org.academiadecodigo.socialsaver.controller;
 
 import org.academiadecodigo.socialsaver.persistence.model.Entity.Doner;
-import org.academiadecodigo.socialsaver.services.DonerServiceImpl;
+import org.academiadecodigo.socialsaver.services.DonerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,16 +14,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/customer")
 public class CustomerController {
 
-    private DonerServiceImpl donerService;
+    private DonerService donerService;
 
     @Autowired
-    public void setDonerService(DonerServiceImpl donerService) {
+    public void setDonerService(DonerService donerService) {
         this.donerService = donerService;
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/{id}")
     public String list(@PathVariable Integer id, Model model) {
-        model.addAttribute("batata", donerService.get(id));
+        //model.addAttribute("batata", donerService.get(id));
         return "details";
     }
 

@@ -15,6 +15,8 @@ import java.util.List;
 public class Doner extends AbstractEntity {
 
     private String type= "doner";
+
+    //todo add feature list items to donate
     private List<Items> toDonateItems= new LinkedList<>();
 
 

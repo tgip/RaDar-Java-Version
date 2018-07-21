@@ -1,9 +1,7 @@
 package org.academiadecodigo.socialsaver.persistence.model.Entity;
 
-import org.academiadecodigo.socialsaver.persistence.model.Entity.AbstractEntity;
 import org.academiadecodigo.socialsaver.persistence.model.Items;
 
-import javax.persistence.*;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -13,27 +11,27 @@ import java.util.List;
 
 public class Receiver extends AbstractEntity {
 
+	private List<Items> neededItems = new LinkedList<>();
 
+	private String type = "receiver";
 
-    private List<Items> neededItems= new LinkedList<>();
+	public String getType() {
+		return type;
+	}
 
-    private String type= "receiver";
+	public void setType(String type) {
+		this.type = type;
+	}
 
-    public String getType() {
-        return type;
-    }
+	public List<Items> getNeededItems() {
+		return neededItems;
+	}
 
-    public void setType(String type) {
-        this.type = type;
-    }
+	public void setNeededItems(Items items) {
+		neededItems.add(items);
+	}
 
-    public List<Items> getNeededItems() {
-        return neededItems;
-    }
-
-    public void setNeededItems(Items items) {
-        neededItems.add(items);
-    }
-
-
+	public void receiveItem(Items item) {
+		neededItems.remove(item);
+	}
 }

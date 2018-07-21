@@ -13,8 +13,6 @@ import java.util.Date;
 @MappedSuperclass
 public abstract class AbstractEntity implements Model {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Integer id;
     protected String name;
     protected String email;

@@ -7,14 +7,14 @@
         <property name="donerService" ref="donerService"/>
     </bean>
 
-    <bean id="donerService" class="org.academiadecodigo.socialsaver.services.DonerServiceImpl">
+    <bean id="donerService" class="org.academiadecodigo.socialsaver.services.DonerService">
         <property name="customerDao" ref="customerDao"/>
     </bean>
 
-    <bean id="accountService" class="org.academiadecodigo.socialsaver.services.DonationServiceImpl">
+   <!-- <bean id="accountService" class="org.academiadecodigo.socialsaver.services.DonationServiceImpl">
         <property name="accountDao" ref="accountDao"/>
     </bean>
-
+-->
     <bean id="accountFactory" class="org.academiadecodigo.socialsaver.factories.DonerFactory"/>
 
 </beans>

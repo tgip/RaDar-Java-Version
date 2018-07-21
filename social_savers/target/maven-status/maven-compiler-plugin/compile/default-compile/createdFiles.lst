@@ -1,0 +1,13 @@
+org/academiadecodigo/socialsaver/persistence/model/Entity/Doner.class
+org/academiadecodigo/socialsaver/persistence/model/Entity/AbstractEntity.class
+org/academiadecodigo/socialsaver/controller/CustomerController.class
+org/academiadecodigo/socialsaver/persistence/model/Entity/Receiver.class
+org/academiadecodigo/socialsaver/Config.class
+org/academiadecodigo/socialsaver/controller/MainController.class
+org/academiadecodigo/socialsaver/persistence/model/Model.class
+org/academiadecodigo/socialsaver/controller/LoginController.class
+org/academiadecodigo/socialsaver/App.class
+org/academiadecodigo/socialsaver/services/DonerServiceImpl.class
+org/academiadecodigo/socialsaver/services/ReceiverService.class
+org/academiadecodigo/socialsaver/persistence/model/Items.class
+org/academiadecodigo/socialsaver/factories/DonerFactory.class
