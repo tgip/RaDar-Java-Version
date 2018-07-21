@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang=“en” xmlns:th=“http://www.thymeleaf.org“>
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" width="device-width" initial-scale="1"/>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta http-equiv="Author" content="Humberto Sousa (humberto@thegreenislandproject.com)"/>
-    <title>IPSS Donate</title>
+    <meta http-equiv="Content-Type" content="text/html;" charset="utf-8"/>
+    <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
           integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -19,82 +18,157 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
             integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
             crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
-          integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <style>
 
-    <link rel="stylesheet" href="./social_savers.css">
+        .Body_Container {
+            width: 100vw;
+            height: 95vh;
+            background-color: rgba(19, 184, 215, 0.6);
+            margin: .5em;
+            background: url("assets/background.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .Main_Menu {
+            background-color: rgba(19, 184, 215, 0.6);
+            padding: .5em;
+            font-size: 1.8em;
+        }
+
+        .needs_list {
+            background-color: rgba(250, 250, 250, .9);
+            width: 85%;
+            padding: 1%;
+            margin: auto;
+
+        }
+
+        .login {
+            display: inline-flex;
+            width: 25%;
+            background-color: rgba(255, 255, 255, .9);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-align: center;
+        }
+
+        div.card {
+
+            display: inline-flex;
+            width: 250px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-align: center;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+
+        input {
+            border: 10px;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        input[type="submit"] {
+            background: grey;
+            color: white;
+        }
+    </style>
+
 </head>
-<body>
-<div id="Body_Container">
-    <div class="Main_Menu"><span style="font-size: 2em"> <i class="fas fa-hand-holding-heart"></i></span> Main Menu goes
-        here
-    </div>
-    <div class="table needs_list">Nececidades de IPSS's:
-        <table>
-            <thead>
-            <tr>
-                <th>Recepiente</th>
-                <th>Matéria/Serviços</th>
-                <th></th>
-            </tr>
-            </thead>
-            <tr>
-                <td>Caritas</td>
-                <td>Batatas</td>
-                <td><button id="${receiver.receivername}" class=".btn-success">Doar agora!</button></td>
-            </tr>
-            <tr>
-                <td>Banco Alimentar</td>
-                <td>Leite</td>
-                <td><button id="${receiver.receivername}" class=".btn-success">Doar agora!</button></td>
-            </tr>
-            <tr>
-                <td>Cruz Vermelha</td>
-                <td>Serviços - Electricista - 1h</td>
-                <td><button id="${receiver.receivername}" class=".btn-success">Doar agora!</button></td>
-            </tr>
-            <tr>
-                <td>Junta de Freguesia Altares</td>
-                <td>Pijamas</td>
-                <td><button id="${receiver.receivername}" class=".btn-success">Doar agora!</button></td>
-            </tr>
-            <tr>
-                <td>Banco Alimentar</td>
-                <td>Milho</td>
-                <td><button id="${receiver.receivername}" class=".btn-success">Doar agora!</button></td>
-            </tr>
-            <tr>
-                <td>Carita</td>
-                <td>Sapatos</td>
-                <td><button id="${receiver.receivername}" class=".btn-success">Doar agora!</button></td>
-            </tr>
-            <tr>
-                <td>Caritas</td>
-                <td>Comida de Bebe</td>
-                <td><button id="${receiver.receivername}" class=".btn-success">Doar agora!</button></td>
-            </tr>
-            <tr>
-                <td>Junta de Freguesia da Conceição</td>
-                <td>Roupa de Bebe</td>
-                <td><button id="${receiver.receivername}" class=".btn-success">Doar agora!</button></td>
-            </tr>
-            <tr>
-                <td>Banco Alimentar</td>
-                <td>Farinha</td>
-                <td><button id="${receiver.receivername}" class=".btn-success">Doar agora!</button></td>
-            </tr>
-            <tr>
-                <td>Cruz Vermelha</td>
-                <td>Serviços - Jardineiro - 30m</td>
-                <td><button id="${receiver.receivername}" class=".btn-success">Doar agora!</button></td>
-            </tr>
+<body class="Body_Container">
 
-        </table>
+<div class="Main_Menu">
+    <div id="logo"><img src="assets/LogoRaDar.png" width="400"/></div>
+</div>
+<div class="table needs_list">Nececidades de IPSS's:
+    <table>
+        <thead>
+        <tr>
+            <th>Recepiente</th>
+            <th>Matéria/Serviços</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tr>
+            <td>Caritas</td>
+            <td>Batatas</td>
+            <td>
+                <button id="${receiver.receivername}" class=".btn-success">Doar agora!</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Banco Alimentar</td>
+            <td>Leite</td>
+            <td>
+                <button id="${receiver.receivername}" class=".btn-success">Doar agora!</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Cruz Vermelha</td>
+            <td>Serviços - Electricista - 1h</td>
+            <td>
+                <button id="${receiver.receivername}" class=".btn-success">Doar agora!</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Junta de Freguesia Altares</td>
+            <td>Pijamas</td>
+            <td>
+                <button id="${receiver.receivername}" class=".btn-success">Doar agora!</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Banco Alimentar</td>
+            <td>Milho</td>
+            <td>
+                <button id="${receiver.receivername}" class=".btn-success">Doar agora!</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Carita</td>
+            <td>Sapatos</td>
+            <td>
+                <button id="${receiver.receivername}" class=".btn-success">Doar agora!</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Caritas</td>
+            <td>Comida de Bebe</td>
+            <td>
+                <button id="${receiver.receivername}" class=".btn-success">Doar agora!</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Junta de Freguesia da Conceição</td>
+            <td>Roupa de Bebe</td>
+            <td>
+                <button id="${receiver.receivername}" class=".btn-success">Doar agora!</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Banco Alimentar</td>
+            <td>Farinha</td>
+            <td>
+                <button id="${receiver.receivername}" class=".btn-success">Doar agora!</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Cruz Vermelha</td>
+            <td>Serviços - Jardineiro - 30m</td>
+            <td>
+                <button id="${receiver.receivername}" class=".btn-success">Doar agora!</button>
+            </td>
+        </tr>
 
-        <div>
+    </table>
 
+    <div>
 
-    </div>
-    <div class="footer">&copy 2018 - Social_Savers_Inc.</div>
+        <div class="footer">&copy 2018 - Social_Savers_Inc.</div>
 </body>
 </html>

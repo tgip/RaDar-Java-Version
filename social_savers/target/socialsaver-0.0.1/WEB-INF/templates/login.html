@@ -46,10 +46,10 @@
 
         .login {
             display: inline;
-            width: 25%;
             background-color: rgba(255, 255, 255, .9);
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             text-align: center;
+            width: 25vw;
         }
 
         div.card {
@@ -77,24 +77,30 @@
             background: grey;
             color: white;
         }
+
         login-form {
             width: 50vw;
         }
 
-        panel-heading{
+        panel-heading {
             padding: .5em;
-            color: rgba(200,200,200,0.8);
+            color: rgba(200, 200, 200, 0.8);
         }
 
-        panel-body{
+        panel-body {
             padding: .2em;
-            color: rgba(200,200,200,0.6);
+            color: rgba(200, 200, 200, 0.6);
         }
-        </style>
+
+        body {
+            padding: .5em;
+
+        }
+    </style>
 
 </head>
 <body class="Body_Container">
-<div id = "logo"><img src="assets/LogoRaDar.png" width="400"/></div>
+<div id="logo"><img src="assets/LogoRaDar.png" width="400"/></div>
 <!-- todo float in transparent div -->
 <div id="login-form" class="login">
     <div class="panel-heading">&Eacute; necess&aacute;rio autenticar-se para utilizar este servi&ccedil;o</div>
@@ -102,7 +108,7 @@
         <form th:object="${loginForm}" action="/sss/login" method="post">
 
             <input type="text" th:field="*{name}"/>
-            <input type="text" th:field="*{password}"/>
+            <input type="password" th:field="*{password}"/>
             <input type="submit"/>
         </form>
 
