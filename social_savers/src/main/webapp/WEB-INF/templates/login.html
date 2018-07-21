@@ -30,19 +30,6 @@
             background-position: center;
         }
 
-        .Main_Menu {
-            background-color: rgba(19, 184, 215, 0.6);
-            padding: .5em;
-            font-size: 1.8em;
-        }
-
-        .needs_list {
-            background-color: rgba(250, 250, 250, .9);
-            width: 85%;
-            padding: 1%;
-            margin: auto;
-
-        }
 
         .login {
             display: inline;
@@ -51,20 +38,8 @@
             text-align: center;
             width: 25vw;
         }
-
-        div.card {
-
-            display: inline-flex;
-            width: 250px;
-            background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            text-align: center;
-        }
-
-        .footer {
-            position: fixed;
-            bottom: 0;
-            right: 0;
+        .panel-body {
+            font-size: 1.2em;
         }
 
         input {
@@ -106,9 +81,10 @@
     <div class="panel-heading ">&Eacute; necess&aacute;rio autenticar-se para utilizar este servi&ccedil;o</div>
     <div class="panel-body">
         <form th:object="${loginForm}" action="/sss/login" method="post">
-
-            <input type="text" th:field="*{name}"/>
-            <input type="password" th:field="*{password}"/>
+            <label for="name">Nome</label>
+            <input id="name" type="text" th:field="*{name}"/>
+            <label for="pwd">Senha</label>
+            <input id ="pwd" type="password" th:field="*{password}"/>
             <input type="submit"/>
         </form>
 
