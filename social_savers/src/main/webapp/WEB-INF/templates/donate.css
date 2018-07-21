@@ -1,11 +1,10 @@
 
 body {
     text-align: center;
-    background: url("https://media.giphy.com/media/xT8qBvH1pAhtfSx52U/giphy.gif");
-    background-size:cover;
-    background-position: center;
-    color: white;
-    font-family: helvetica;
+    background: url("/Users/codecadet/Desktop/hackatoino/social_savers/src/main/resources/58822-O9FHDL-571.jpg");
+    background-size: cover;
+    padding: 0;
+    margin: 0;
 }
 p{
     font-size: 22px;
