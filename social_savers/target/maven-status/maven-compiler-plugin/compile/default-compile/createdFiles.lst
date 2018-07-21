@@ -5,6 +5,7 @@ org/academiadecodigo/socialsaver/persistence/model/Entity/Receiver.class
 org/academiadecodigo/socialsaver/Config.class
 org/academiadecodigo/socialsaver/controller/MainController.class
 org/academiadecodigo/socialsaver/persistence/model/Model.class
+org/academiadecodigo/socialsaver/command/LoginForm.class
 org/academiadecodigo/socialsaver/controller/LoginController.class
 org/academiadecodigo/socialsaver/App.class
 org/academiadecodigo/socialsaver/services/DonerService.class

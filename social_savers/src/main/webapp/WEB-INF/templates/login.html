@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,15 +26,12 @@
 <div id="login-form" class="login">
     <div class="panel-heading">&Eacute; necess&aacute;rio autenticar-se para utilizar este servi&ccedil;o</div>
     <div class="panel-body">
-        <form action="" name="login" method="POST">
-            <div class="form-group">
-                <label for="user">Utilizador:</label>
-                <input type="text" id="user" name="user" value="" placeholder="Utilizador">
-                <label for="pass">Senha:</label>
-                <input type="password" id="pass" name="pass" value="" placeholder="Senha"><br>
-                <br><input type="submit" value="Entrar">
-            </div>
+        <form th:object="${loginForm}" action="/sss/login" method="post">
+            <input type="text" th:field="*{name}"/>
+            <input type="text" th:field="*{password}"/>
+            <input type="submit" />
         </form>
+
     </div>
 </div>
 </body>
