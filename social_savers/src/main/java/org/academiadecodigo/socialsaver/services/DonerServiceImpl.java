@@ -2,26 +2,36 @@ package org.academiadecodigo.socialsaver.services;
 
 import org.academiadecodigo.socialsaver.persistence.model.Entity.Doner;
 import org.academiadecodigo.socialsaver.persistence.model.Entity.Receiver;
-import org.academiadecodigo.socialsaver.persistence.dao.CustomerDao;
 import org.academiadecodigo.socialsaver.persistence.model.Items;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
 
-/**
- * An {@link DonerService} implementation
- */
-public class DonerServiceImpl implements DonerService {
+
+public class DonerServiceImpl {
 
     //private CustomerDao customerDao;
 
     private List<Doner> doners= new LinkedList<>();
-    private ItemService itemService;
+    private Doner loggedDoner;
+
 
    // public void setCustomerDao(CustomerDao customerDao) {
        // this.customerDao = customerDao;
    // }
 
+    public boolean login(String username, String password){
+        for (Doner doner:doners) {
+            if(doner.getName().equals(username) && doner.getPassword().equals(password)){
+                loggedDoner=doner;
+              return true;
+            }
+        }
+    return false;
+    }
+
+    public Doner getLoggedDoner() {
+        return loggedDoner;
+    }
 
     public void add(Doner doner){
         doners.add(doner);
@@ -39,8 +49,15 @@ public class DonerServiceImpl implements DonerService {
       //  return customerDao.findById(id);
     //}
 
+    public void publishItem(Items items, Doner loggedDoner){
+        loggedDoner.setToDonateItems(items);
+    }
 
     public void donate(Receiver receiver, Items item){
-        itemService.donated(item);
+        for(Items i :receiver.getNeededItems()){
+            if(i.equals(item)){
+                i.setDonated(true);
+            }
+        }
     }
 }

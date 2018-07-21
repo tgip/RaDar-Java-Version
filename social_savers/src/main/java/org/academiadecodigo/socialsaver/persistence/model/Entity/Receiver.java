@@ -13,6 +13,8 @@ import java.util.List;
 
 public class Receiver extends AbstractEntity {
 
+
+
     private List<Items> neededItems= new LinkedList<>();
 
     private String type= "receiver";
@@ -25,7 +27,13 @@ public class Receiver extends AbstractEntity {
         this.type = type;
     }
 
+    public List<Items> getNeededItems() {
+        return neededItems;
+    }
 
+    public void setNeededItems(Items items) {
+        neededItems.add(items);
+    }
 
 
 }
