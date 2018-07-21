@@ -113,8 +113,8 @@
                 <configuration>
                     <url>http://localhost:8080/manager/text</url>
                     <server>tomcat</server>
-                    <username>monica</username>
-                    <password>monica</password>
+                    <username>adriano</username>
+                    <password>adriano</password>
                     <path>/sss</path>
                 </configuration>
             </plugin>

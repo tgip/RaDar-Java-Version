@@ -64,4 +64,6 @@ public abstract class AbstractEntity implements Model {
         this.password = password;
     }
 
+
+
 }

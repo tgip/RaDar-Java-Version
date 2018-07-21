@@ -11,6 +11,16 @@ public class ReceiverService {
     private List<Items> allItems= new LinkedList<>();
 
 
+    public ReceiverService() {
+        Receiver receiver=new Receiver();
+        receiver.setName("Caritas");
+        receiver.setType("IPSS");
+        Items items= new Items();
+        items.setType("Batatas");
+        add(receiver);
+        publishItem(items,receiver);
+        receivers.add(receiver);
+    }
 
     public void add(Receiver receiver){
         receivers.add(receiver);
