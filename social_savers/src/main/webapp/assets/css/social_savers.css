@@ -15,15 +15,16 @@
 }
 
 .needs_list {
-    background-color: rgba(250,250,250,.9);
+    background-color: rgba(250, 250, 250, .9);
     width: 85%;
     padding: 1%;
     margin: auto;
 
 }
-.login {
-    display: inline-flex;
-    width: 250px;
+
+.login_form {
+    margin: auto;
+    width: 50%;
     background-color: rgba(255, 255, 255, .9);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
@@ -44,12 +45,3 @@ div.card {
     right: 0;
 }
 
-input{
-    border: 10px;
-    padding: 10px;
-    font-size: 18px;
-}
-input[type="submit"]{
-    background: grey;
-    color: white;
-}

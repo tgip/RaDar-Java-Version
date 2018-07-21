@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
           integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./social_savers.css">
+    <link rel="stylesheet" th:href="@{/assets/css/social_savers.css}">
 </head>
 <body>
 <div id="Body_Container">
@@ -31,7 +31,7 @@
     </div>
     <div class="needs_list">The ipss's need :
         <div>
-
+            <form th:object="${donateform}" action=""
             <div class="card">
                 <div class="type">${type}</div>
                 <div class="description">${description}</div>
