@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,19 +19,25 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
             integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
             crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" th:href="@{/assets/css/social_savers.css}">
 </head>
 <body>
-<!-- todo float in transparent div -->
-<div id="login-form" class="login">
-    <div class="panel-heading">&Eacute; necess&aacute;rio autenticar-se para utilizar este servi&ccedil;o</div>
-    <div class="panel-body">
-        <form th:object="${loginForm}" action="/sss/login" method="post">
-            <input type="text" th:field="*{name}"/>
-            <input type="text" th:field="*{password}"/>
-            <input type="submit" />
-        </form>
 
+<!-- todo float in transparent div -->
+
+<div id="Body_Container">
+    <!-- todo float in transparent div -->
+    <div id="login-form">
+        <div class="panel-heading">&Eacute; necess&aacute;rio autenticar-se para utilizar este servi&ccedil;o</div>
+        <div class=“panel-body”>
+            <form th:object=“${loginForm}” action=“/sss/login” method=“post”>
+                <div class="form-group login_form">
+                    <input type=“text” th:field=“*{name}“ placeholder="Utilizador"/>
+                    <input type=“text” th:field=“*{password}“ name="pass" placeholder="Senha"/>
+                    <br><input type="submit" value="Entrar">
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 </body>
