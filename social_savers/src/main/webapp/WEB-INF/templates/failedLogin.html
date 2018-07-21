@@ -45,11 +45,11 @@
         }
 
         .login {
-            display: inline-flex;
-            width: 25%;
+            display: inline;
             background-color: rgba(255, 255, 255, .9);
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             text-align: center;
+            width: 25vw;
         }
 
         div.card {
@@ -77,6 +77,25 @@
             background: grey;
             color: white;
         }
+
+        login-form {
+            width: 50vw;
+        }
+
+        panel-heading {
+            padding: .5em;
+            color: rgba(200, 200, 200, 0.8);
+        }
+
+        panel-body {
+            padding: .2em;
+            color: rgba(200, 200, 200, 0.6);
+        }
+
+        body {
+            padding: .5em;
+
+        }
     </style>
 
 </head>
@@ -88,7 +107,7 @@
     <div class="panel-body">
         <form th:object="${loginForm}" action="/sss/login1" method="post">
             <input type="text" th:field="*{name}"/>
-            <input type="text" th:field="*{password}"/>
+            <input type="password" th:field="*{password}"/>
             <input type="submit" />
         </form>
 

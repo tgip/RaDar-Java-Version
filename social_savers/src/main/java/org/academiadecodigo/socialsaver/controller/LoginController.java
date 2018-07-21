@@ -22,7 +22,7 @@ public class LoginController {
         this.donerService = donerService;
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/login")
+    @RequestMapping(method = RequestMethod.GET, value = {"/login","/",""})
     public String root(Model model) {
         model.addAttribute("loginForm", new LoginForm());
         return "login";
