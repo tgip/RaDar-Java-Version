@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,52 +29,70 @@
     <div class="Main_Menu"><span style="font-size: 2em"> <i class="fas fa-hand-holding-heart"></i></span> Main Menu goes
         here
     </div>
-    <div class="needs_list">The ipss's need :
+    <div class="table needs_list">Nececidades de IPSS's:
+        <table>
+            <thead>
+            <tr>
+                <th>Recepiente</th>
+                <th>Matéria/Serviços</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tr>
+                <td>Caritas</td>
+                <td>Batatas</td>
+                <td><button id="${receiver.receivername}" class=".btn-success">Doar agora!</button></td>
+            </tr>
+            <tr>
+                <td>Banco Alimentar</td>
+                <td>Leite</td>
+                <td><button id="${receiver.receivername}" class=".btn-success">Doar agora!</button></td>
+            </tr>
+            <tr>
+                <td>Cruz Vermelha</td>
+                <td>Serviços - Electricista - 1h</td>
+                <td><button id="${receiver.receivername}" class=".btn-success">Doar agora!</button></td>
+            </tr>
+            <tr>
+                <td>Junta de Freguesia Altares</td>
+                <td>Pijamas</td>
+                <td><button id="${receiver.receivername}" class=".btn-success">Doar agora!</button></td>
+            </tr>
+            <tr>
+                <td>Banco Alimentar</td>
+                <td>Milho</td>
+                <td><button id="${receiver.receivername}" class=".btn-success">Doar agora!</button></td>
+            </tr>
+            <tr>
+                <td>Carita</td>
+                <td>Sapatos</td>
+                <td><button id="${receiver.receivername}" class=".btn-success">Doar agora!</button></td>
+            </tr>
+            <tr>
+                <td>Caritas</td>
+                <td>Comida de Bebe</td>
+                <td><button id="${receiver.receivername}" class=".btn-success">Doar agora!</button></td>
+            </tr>
+            <tr>
+                <td>Junta de Freguesia da Conceição</td>
+                <td>Roupa de Bebe</td>
+                <td><button id="${receiver.receivername}" class=".btn-success">Doar agora!</button></td>
+            </tr>
+            <tr>
+                <td>Banco Alimentar</td>
+                <td>Farinha</td>
+                <td><button id="${receiver.receivername}" class=".btn-success">Doar agora!</button></td>
+            </tr>
+            <tr>
+                <td>Cruz Vermelha</td>
+                <td>Serviços - Jardineiro - 30m</td>
+                <td><button id="${receiver.receivername}" class=".btn-success">Doar agora!</button></td>
+            </tr>
+
+        </table>
+
         <div>
 
-            <div class="card">
-                <div class="type">${type}</div>
-                <div class="description">${description}</div>
-                <div class="donate">
-                    <button id="${id}" class=".btn-success">Doar agora!</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="type">${type}</div>
-                <div class="description">${description}</div>
-                <div class="donate">
-                    <button id="${id}" class=".btn-success">Doar agora!</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="type">${type}</div>
-                <div class="description">${description}</div>
-                <div class="donate">
-                    <button id="${id}" class=".btn-success">Doar agora!</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="type">${type}</div>
-                <div class="description">${description}</div>
-                <div class="donate">
-                    <button id="${id}" class=".btn-success">Doar agora!</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="type">${type}</div>
-                <div class="description">${description}</div>
-                <div class="donate">
-                    <button id="${id}" class=".btn-success">Doar agora!</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="type">${type}</div>
-                <div class="description">${description}</div>
-                <div class="donate">
-                    <button id="${id}" class=".btn-success">Doar agora!</button>
-                </div>
-            </div>
-        </div>
 
     </div>
     <div class="footer">&copy 2018 - Social_Savers_Inc.</div>

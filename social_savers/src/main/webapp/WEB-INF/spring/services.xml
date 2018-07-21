@@ -9,6 +9,8 @@
     <bean id="donerService" class="org.academiadecodigo.socialsaver.services.DonerService">
     </bean>
 
+
+
    <!-- <bean id="accountService" class="org.academiadecodigo.socialsaver.services.DonationServiceImpl">
         <property name="accountDao" ref="accountDao"/>
     </bean>
