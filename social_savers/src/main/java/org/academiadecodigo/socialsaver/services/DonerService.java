@@ -14,6 +14,23 @@ public class DonerService {
     private List<Doner> doners= new LinkedList<>();
     private Doner loggedDoner;
 
+    public DonerService(){
+        Doner doner = new Doner();
+        doner.setName("Monica");
+        doner.setPassword("monica");
+        doners.add(doner);
+
+        Doner doner1 = new Doner();
+        doner1.setName("Alexandre");
+        doner1.setPassword("alexandre");
+        doners.add(doner1);
+
+        Doner doner2 = new Doner();
+        doner2.setName("Adriano");
+        doner2.setPassword("adriano");
+        doners.add(doner2);
+    }
+
 
    // public void setCustomerDao(CustomerDao customerDao) {
        // this.customerDao = customerDao;

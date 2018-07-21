@@ -22,17 +22,25 @@ public class LoginController {
         this.donerService = donerService;
     }
 
-	@RequestMapping(method = RequestMethod.GET, value = "/login")
-	public String root(Model model) {
-	    model.addAttribute("loginForm", new LoginForm());
-		return "login";
-	}
+    @RequestMapping(method = RequestMethod.GET, value = "/login")
+    public String root(Model model) {
+        model.addAttribute("loginForm", new LoginForm());
+        return "login";
+    }
 
-	@RequestMapping(method = RequestMethod.POST, value = "/login")
+    @RequestMapping(method = RequestMethod.POST, value = "/login")
     public String login(@ModelAttribute LoginForm loginForm){
         if(donerService.login(loginForm.getName(),loginForm.getPassword())){
             return "Main";
         }
-        return "login";
+        return "failedLogin";
+    }
+
+    @RequestMapping(method = RequestMethod.POST, value = "/login1")
+    public String login1(@ModelAttribute LoginForm loginForm){
+        if(donerService.login(loginForm.getName(),loginForm.getPassword())){
+            return "Main";
+        }
+        return "failedLogin";
     }
 }
