@@ -1,21 +1,23 @@
 
 body {
     text-align: center;
-    background: url("https://cdn.tinybuddha.com/wp-content/uploads/2015/04/Happy-Hands.jpg");
-    background-size:cover;
-    background-position: center;
-    color: white;
-    font-family: helvetica;
+    background: url("/Users/codecadet/Desktop/hackatoino/social_savers/src/main/resources/58822-O9FHDL-571.jpg");
+    background-size: cover;
+    padding: 0;
+    margin: 0;
 }
 p{
     font-size: 22px;
+    font-family: 'Open Sans' , sans-serif;
 }
 input{
     border: 10px;
     padding: 10px;
     font-size: 18px;
+    font-family: 'Open Sans' , sans-serif;
 }
 input[type="submit"]{
     background: grey;
     color: white;
+    font-family: 'Open Sans' , sans-serif;
 }

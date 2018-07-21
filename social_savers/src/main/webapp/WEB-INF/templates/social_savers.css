@@ -16,6 +16,7 @@ img{
     background-color: rgba(19, 184, 215, 0.6);
     padding: .5em;
     font-size: 1.8em;
+    font-family: 'Open Sans' , sans-serif;
 }
 
 .needs_list {

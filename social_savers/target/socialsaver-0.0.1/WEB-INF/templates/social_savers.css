@@ -1,17 +1,22 @@
+
+
 #Body_Container {
     width: 100vw;
     height: 90vh;
-    background-color: rgba(19, 184, 215, 0.6);
-    margin: .5em;
-    background: url("https://cdn.tinybuddha.com/wp-content/uploads/2015/04/Happy-Hands.jpg");
+    background: url("/Users/codecadet/Desktop/hackatoino/social_savers/src/main/resources/58822-O9FHDL-571.jpg");
     background-size: cover;
     background-position: center;
+}
+img{
+    width: 20%;
+    height: auto;
 }
 
 .Main_Menu {
     background-color: rgba(19, 184, 215, 0.6);
     padding: .5em;
     font-size: 1.8em;
+    font-family: 'Open Sans' , sans-serif;
 }
 
 .needs_list {

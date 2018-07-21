@@ -1,0 +1,10 @@
+div {
+    width: 100vw;
+    height: 90vh;
+    background-color: rgba(19, 184, 215, 0.6);
+    margin: .5em;
+    background: url("/Users/codecadet/Desktop/hackatoino/social_savers/src/main/resources/58822-O9FHDL-571.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: 'Open Sans' , sans-serif;
+}
