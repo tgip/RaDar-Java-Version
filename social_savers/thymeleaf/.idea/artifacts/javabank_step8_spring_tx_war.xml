@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="javabank-step8-spring.tx:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="javabank-step8-spring.tx-0.0.1.war">
-      <element id="artifact" artifact-name="javabank-step8-spring.tx:war exploded" />
-    </root>
-  </artifact>
-</component>

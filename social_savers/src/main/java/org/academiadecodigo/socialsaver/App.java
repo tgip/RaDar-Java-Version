@@ -33,7 +33,6 @@ public class App {
 	    // add an IPSS
 	    Receiver r1 = new Receiver();
 	    r1.setName("Humberto");
-	    receiverService.add(r1);
 
         String profile = getProfile();
         System.out.println("#### Active Profiles " + profile + " ####");

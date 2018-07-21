@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,6 +26,19 @@
 </head>
 <body>
 <div id="Body_Container">
+    <div th:if="${not #lists.isEmpty(produts)}">
+        <h2>Produts needed</h2>
+        <table class="table table-striped">
+        <tr>
+            <th>Name</th>
+            <th>Produts</th>
+        </tr>
+        <tr th:each="product : ${list}">
+            <td th:text="${product.name"}></td>
+            <td th:text="${product.product}"></td>
+        </tr>
+        </table>
+    </div>
     <div class="Main_Menu"><span style="font-size: 2em"> <i class="fas fa-hand-holding-heart"></i></span> Main Menu goes
         here
     </div>
@@ -75,7 +88,6 @@
                 </div>
             </div>
         </div>
-
     </div>
     <div class="footer">&copy 2018 - Social_Savers_Inc.</div>
 </body>
