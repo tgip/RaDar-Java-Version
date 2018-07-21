@@ -19,7 +19,7 @@ public class DonerServiceImpl {
        // this.customerDao = customerDao;
    // }
 
-    public boolean verifyLogin(String username, String password){
+    public boolean login(String username, String password){
         for (Doner doner:doners) {
             if(doner.getName().equals(username) && doner.getPassword().equals(password)){
                 loggedDoner=doner;
@@ -29,6 +29,9 @@ public class DonerServiceImpl {
     return false;
     }
 
+    public Doner getLoggedDoner() {
+        return loggedDoner;
+    }
 
     public void add(Doner doner){
         doners.add(doner);
@@ -46,6 +49,9 @@ public class DonerServiceImpl {
       //  return customerDao.findById(id);
     //}
 
+    public void publishItem(Items items, Doner loggedDoner){
+        loggedDoner.setToDonateItems(items);
+    }
 
     public void donate(Receiver receiver, Items item){
         for(Items i :receiver.getNeededItems()){

@@ -8,6 +8,7 @@ import java.util.*;
 public class ReceiverService {
 
     private List<Receiver> receivers= new LinkedList<>();
+    private List<Items> allItems= new LinkedList<>();
 
 
 
@@ -20,6 +21,14 @@ public class ReceiverService {
 
     }
 
+    public List<Items> listAllItems(){
+        for(Receiver receiver: receivers){
+            for(Items item:receiver.getNeededItems()){
+                allItems.add(item);
+            }
+        }
+        return allItems;
+    }
 
 
 }

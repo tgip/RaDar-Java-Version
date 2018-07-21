@@ -26,6 +26,10 @@ public class Doner extends AbstractEntity {
         this.type = type;
     }
 
+    public void setToDonateItems(Items items){
+        toDonateItems.add(items);
+    }
+
     /**
      * @see Object#toString()
      */

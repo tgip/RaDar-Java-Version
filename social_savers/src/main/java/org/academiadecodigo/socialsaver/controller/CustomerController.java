@@ -1,6 +1,7 @@
 package org.academiadecodigo.socialsaver.controller;
 
 import org.academiadecodigo.socialsaver.persistence.model.Entity.Doner;
+import org.academiadecodigo.socialsaver.services.DonerServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/customer")
 public class CustomerController {
 
-    private DonerService donerService;
+    private DonerServiceImpl donerService;
 
     @Autowired
-    public void setDonerService(DonerService donerService) {
+    public void setDonerService(DonerServiceImpl donerService) {
         this.donerService = donerService;
     }
 
