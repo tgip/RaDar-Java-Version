@@ -6,7 +6,7 @@ Donation platform for NGO's to list needs and any entity to donate,
 either to satisfy an NGO's need, or simply to notify of availability of a donation.
 
 Note: Project was awarded 2nd Place, mainly for the contribuition to society
-![RaDAR Logo](src/main/webapp/assets/LogoRaDar.jpg?raw=true "RaDAR")
+![RaDAR Logo](social_savers/src/main/webapp/assets/LogoRaDar.jpg?raw=true "RaDAR")
 
 
 <br/>Project for <Academia de Código_> bootcamp - Terceira TechIsland 2018
