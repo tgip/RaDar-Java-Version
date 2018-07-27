@@ -9,11 +9,11 @@ either to satisfy an NGO's need, or simply to notify of availability of a donati
 Note: Project was awarded 2nd Place, mainly for the contribuition to society
 
 <p>Authors:
-<br/>*Adriano Soares - Team Leader
-<br/>*Mónica Garcia - Story Teller
-<br/>*Alexandre Costa - Moderator
-<br/>*Nuno Paz - Git Master
-<br/>*Humberto Sousa - everything else
+<br/>*Adriano Soares - Team Leader / services
+<br/>*Mónica Garcia - Story Teller / controllers
+<br/>*Alexandre Costa - Moderator / frontend
+<br/>*Nuno Paz - Git Master / database
+<br/>*Humberto Sousa - everything else (integration)
 
 <p>AC - MC's:
 <br/>Pedro Antoninho
