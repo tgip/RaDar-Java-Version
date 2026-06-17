@@ -25,7 +25,7 @@ public abstract class AbstractEntity implements Model {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
+                ", password='<redacted>'" +
                 '}';
     }
 
