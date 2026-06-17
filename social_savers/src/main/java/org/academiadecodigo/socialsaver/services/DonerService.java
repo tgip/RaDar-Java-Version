@@ -3,6 +3,7 @@ package org.academiadecodigo.socialsaver.services;
 import org.academiadecodigo.socialsaver.persistence.model.Entity.Doner;
 import org.academiadecodigo.socialsaver.persistence.model.Entity.Receiver;
 import org.academiadecodigo.socialsaver.persistence.model.Items;
+import org.academiadecodigo.socialsaver.security.PasswordUtil;
 
 import java.util.*;
 
@@ -11,24 +12,11 @@ public class DonerService {
 
     //private CustomerDao customerDao;
 
-    private List<Doner> doners= new LinkedList<>();
+    private List<Doner> doners = new LinkedList<>();
     private Doner loggedDoner;
 
     public DonerService(){
-        Doner doner = new Doner();
-        doner.setName("Monica");
-        doner.setPassword("monica");
-        doners.add(doner);
-
-        Doner doner1 = new Doner();
-        doner1.setName("Alexandre");
-        doner1.setPassword("alexandre");
-        doners.add(doner1);
-
-        Doner doner2 = new Doner();
-        doner2.setName("Adriano");
-        doner2.setPassword("adriano");
-        doners.add(doner2);
+        // constructor no longer seeds plaintext passwords; seeding should be performed by DataSeeder
     }
 
 
@@ -37,13 +25,13 @@ public class DonerService {
    // }
 
     public boolean login(String username, String password){
-        for (Doner doner:doners) {
-            if(doner.getName().equals(username) && doner.getPassword().equals(password)){
-                loggedDoner=doner;
-              return true;
+        for (Doner doner: doners) {
+            if(doner.getName().equals(username) && PasswordUtil.matches(password, doner.getPassword())){
+                loggedDoner = doner;
+                return true;
             }
         }
-    return false;
+        return false;
     }
 
     public Doner getLoggedDoner() {
@@ -51,6 +39,10 @@ public class DonerService {
     }
 
     public void add(Doner doner){
+        // ensure password is stored hashed
+        if (doner.getPassword() != null) {
+            doner.setPassword(PasswordUtil.hash(doner.getPassword()));
+        }
         doners.add(doner);
     }
 
