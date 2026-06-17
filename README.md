@@ -18,4 +18,4 @@ Note: Project was awarded 2nd Place, mainly for the contribuition to society
 <p>AC - MC's:
 <br/>Pedro Antoninho
 <br/>Francisco Machado
-<br/>Rodrigo Duarte
+<br/>Rodrigo Duarte (RIP) ={¨}
