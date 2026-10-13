@@ -4,7 +4,7 @@
          <dependency>
              <groupId>org.springframework</groupId>
              <artifactId>spring-webmvc</artifactId>
-             <version>4.3.11.RELEASE</version>
+             <version>5.3.40.RELEASE</version>
          </dependency>
 +
 +        <!-- Password hashing via BCrypt -->
